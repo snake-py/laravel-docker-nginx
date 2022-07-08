@@ -125,4 +125,4 @@ volumes:
 
 networks:
   proxynet:
-    name: portal
+    name: laravle-dev-to-network
