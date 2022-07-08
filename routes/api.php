@@ -5,5 +5,5 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-    return response()->json(['message' => 'Welcome to our api'], 200);
+    return response()->json(['message' => 'Visit my portfolio site at https://snake-py.com'], 200);
 });
