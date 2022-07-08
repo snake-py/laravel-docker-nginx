@@ -1,0 +1,8 @@
+FROM php:7.4-fpm
+
+RUN pecl install xdebug-2.9.2 \
+    && docker-php-ext-enable xdebug  
+
+RUN docker-php-ext-install mysqli pdo pdo_mysql
+
+COPY .docker/xdebug-nginx.ini /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
