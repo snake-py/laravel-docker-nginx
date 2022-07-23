@@ -88,6 +88,8 @@ services:
         networks:
             - proxynet
     php-fpm:
+        extra_hosts:
+            - "host.docker.internal:host-gateway"
         build: 
             dockerfile: Dockerfile.PHP-FPM
         container_name: ${DOCKER_APP_CONTAINER_NAME}-php-fpm
